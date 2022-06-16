@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_tarea">
+
+    <fragment
+        android:id="@+id/nav_tarea"
+        android:name="com.example.tarea1.ui.tarea.TareaFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_tarea" >
+        <action
+            android:id="@+id/action_nav_tarea_to_addCancionFragment"
+            app:destination="@id/addCancionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.tarea1.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.tarea1.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addCancionFragment"
+        android:name="com.example.tarea1.ui.tarea.AddCancionFragment"
+        android:label="fragment_add_cancion"
+        tools:layout="@layout/fragment_add_cancion" >
+        <action
+            android:id="@+id/action_addCancionFragment_to_nav_tarea"
+            app:destination="@id/nav_tarea" />
+    </fragment>
+</navigation>
